@@ -32,12 +32,12 @@ var scissors = document.getElementById("Scissors")
 scissors.addEventListener("click", function() {
     var userChoice="Scissors";
     document.getElementById("userChoice").innerHTML = userChoice;
-    document.getElementById("computerChoice").innerHTML = compChoice;
     winner(userChoice)
 })
 
 function winner(userChoice) {
     var compChoice=options[Math.floor(Math.random()*options.length)];
+    document.getElementById("computerChoice").innerHTML = compChoice;
         if ((userChoice=== "Rock" && compChoice==="Scissors") || 
             (userChoice==="Paper" && compChoice==="Rock") || 
             (userChoice==="Scissors" && compChoice==="Paper")) {
