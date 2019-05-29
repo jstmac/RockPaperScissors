@@ -13,6 +13,7 @@ var rock = document.getElementById("Rock");
 
 rock.addEventListener("click", function() {
     var userChoice="Rock";
+
     document.getElementById("userChoice").innerHTML = userChoice;
     document.getElementById("computerChoice").innerHTML = compChoice;
     winner(userChoice)
@@ -51,9 +52,26 @@ function winner(userChoice) {
         } 
     }
 
+    var colors = ["red", "blue", "green", "purple", "orange"];
+    var btn = document.getElementById('btn');
+
+    btn.addEventListener("click", changeColor);
+
+    function changeColor() {
+    document.body.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+     };
 
 
-// var choices = document.getElementsByClassName("choice");
+
+
+
+     function printResults(Results) {
+        document.getElementById('printResults').innerHTML = Results;
+        console.log(Results); 
+      }
+
+
+     // var choices = document.getElementsByClassName("choice");
 // console.log(choices);
 // choices.( function(choice) {
 //     choice.addEventListener("click", functional(){
