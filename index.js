@@ -37,23 +37,23 @@ scissors.addEventListener("click", function() {
 
 function winner(userChoice) {
     var compChoice=options[Math.floor(Math.random()*options.length)];
-    if ((userChoice=== "Rock" && compChoice==="Scissors") || 
-    (userChoice==="Paper" && compChoice==="Rock") || 
-    (userChoice==="Scissors" && compChoice==="Paper")) {
-    //  return "YOU WIN!!!!"
-    console.log("Win")
-    } else if (userChoice=== compChoice) {
-        console.log("Tie")
-        // return "It's a TIE!!!"
-     } else {
+        if ((userChoice=== "Rock" && compChoice==="Scissors") || 
+            (userChoice==="Paper" && compChoice==="Rock") || 
+            (userChoice==="Scissors" && compChoice==="Paper")) {
+            //  return "YOU WIN!!!!"
+        console.log("Win")
+        } else if (userChoice=== compChoice) {
+            console.log("Tie")
+            // return "It's a TIE!!!"
+        } else {
           console.log("lose")
         //  return "YOU LOSE!!!!"
-     } 
-}
+        } 
+    }
 
 
 
-// var choices = document.getElementsByClassNane("choice");
+// var choices = document.getElementsByClassName("choice");
 // console.log(choices);
 // choices.( function(choice) {
 //     choice.addEventListener("click", functional(){
